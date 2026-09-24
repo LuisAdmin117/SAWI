@@ -1,0 +1,655 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #f8f9fa;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23566573' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23566573'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+header, footer {
+    background-color: #e0e0e0; /* Gris claro para el fondo */
+    padding: 10px 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333333; /* Texto oscuro para buen contraste */
+    transition: padding 0.3s ease; /* Transición para suavizar el cambio de altura */
+}
+
+header:hover {
+    padding: 20px 20px; /* Aumenta la altura del header cuando el cursor está sobre él */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    display: flex;
+    text-decoration: none;
+    color: #333333; /* Color de texto oscuro para los enlaces */
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, padding 0.3s; /* Transición de color y padding */
+    margin-top: -1px;
+}
+
+nav ul li a:hover {
+    background-color: #757575; /* Gris intermedio para el hover */
+    padding: 15px 20px; /* Aumenta el tamaño del botón cuando se pasa el cursor */
+}
+
+button {
+    text-decoration: none;
+    color: #333333; /* Color de texto oscuro para los enlaces */
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, padding 0.3s; /* Transición de color y padding */
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #757575; /* Gris intermedio para el hover */
+    padding: 15px 20px; /* Aumenta el tamaño del botón cuando se pasa el cursor */
+}
+
+.boton-regreso {
+    position: absolute;
+    top: 117px; /* Ajusta según el tamaño del encabezado */
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white; /* Color del botón */
+    color: #007bff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+
+
+.boton-regreso i {
+    font-size: 24px;
+}
+
+.boton-regreso:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.chart-container {
+    width: 45%;
+    margin: 0 auto;
+}
+
+.reporte-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.reporte-card {
+    background: #ffffff;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    
+}
+
+.reporte-card-segmento h3 {
+    margin: 10px 0;
+    color: #007BFF;
+}
+
+.reporte-card-segmento p {
+    font-size: 16px;
+    color: #666;
+}
+
+.reporte-card-segmento {
+    background: #f8f8f8;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.reporte-segmento p {
+    font-size: 14px;
+    color: #333;
+} 
+
+.contenedor-productos h1{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contenedor-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+}
+.contenedor-productos h1 {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tarjeta-producto {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    justify-content: space-between; /* Separa la imagen y el texto */
+    background: #f8f8f8;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Aumenta el ancho para que haya espacio suficiente */
+}
+
+.tarjeta-producto img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.info-producto {
+    
+    text-align: left; /* Alinea los datos a la derecha */
+    flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+}
+
+.info-producto h2 {
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+.info-producto p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.header-general {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.header-general h1 {
+    margin-bottom: 10px;
+}
+
+/* Estilos del botón "Filtrar Productos" */
+.filtrar {
+    margin-top: 10px; /* Espacio entre el título y el botón */
+    margin-left: 100%;
+    margin-right: -50%;
+}
+
+.filtrar2 {
+    margin-top: 10px; /* Espacio entre el título y el botón */
+    margin-right: -70%;
+}
+
+.btn-filtrar {
+    background-color: #00796b ;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+}
+
+.btn-filtrar:hover {
+    background-color:#004d40 ;
+}
+
+.btn-filtrar:active {
+    transform: scale(0.95);
+}
+
+.modal-filtro {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px; /* Alinea el botón de cerrar a la derecha */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: red;
+}
+
+.filtro-contenedor {
+    position: relative;
+    display: flex;
+    margin: 155px auto;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center; /* Centra el contenido */
+    width: 50%;
+    max-width: 400px; 
+    font-family: 'Inter', sans-serif;
+
+}
+
+label{
+    font-weight: bolder;
+    font-size: 15px;
+    
+}
+
+.filtro-contenedor input, 
+.filtro-contenedor select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.tarjetas-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+#aplicarFiltro{
+    background-color: #00796b;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+#aplicarFiltro:hover{
+    background-color: #004d40;
+    transform: scale(1.01);
+    padding: 0, 0;
+}
+
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #00796b;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.oculto {
+    display: none;
+}
+
+strong {
+    color: #333;
+}
+
+.contenedor-tareas h1{
+    margin-bottom: 20px;
+}
+
+.contenedor-tareas {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.linea-tiempo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.tarea {
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 15px;
+    border-left: 6px solid #3498db;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarea .contenido {
+    width: 100%;
+}
+
+.tarea h2 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.tarea p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.progreso {
+    background: #ddd;
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.barra {
+    height: 8px;
+    background: #3498db;
+    transition: width 0.5s ease-in-out;
+}
+
+.completado {
+    background: #2ecc71;
+}
+
+.pendiente {
+    background: #e74c3c;
+}
+
+/* Botón para tomar tarea */
+.btn-tomar-tarea {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-tomar-tarea:hover {
+    background-color: #2980b9;
+}
+
+.porcentaje {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #333;
+}
+
+.contenedor-reporte h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Contenedor con profundidad */
+.contenedor-reporte {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+    
+}
+
+/* Reportes alineados verticalmente */
+.reporte-empleado {
+    padding: 20px;
+}
+
+/* Tarjetas de empleados */
+.tarjeta-empleado {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.tarjeta-empleado img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.info-empleado h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.info-empleado p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+strong {
+    color: #333;
+}
+
+/* Línea separadora entre reportes */
+.separador {
+    border: none;
+    height: 2px;
+    background: #ddd;
+    margin: 20px 0;
+}
+.contenedor-interacciones {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+.contenedor-interacciones h1 {
+    margin-bottom: 20px;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px auto;
+    width: 60%;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto hover */
+.tarjeta:hover {
+    transform: scale(1.02);
+}
+
+/* Cuadro de la foto del cliente */
+.foto-cliente {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid #ddd;
+}
+
+/* Imagen del cliente */
+.foto-cliente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Información de la tarjeta */
+.info h2 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Estilos de resultados */
+.resultado {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Éxito */
+
+div.info .resultado.exitosa {
+    color: #2ecc71;
+    background: rgba(46, 204, 113, 0.1);
+}
+
+.resultado.media {
+    color: #ffd700; /* Amarillo intenso */
+    background: rgba(252, 237, 22, 0.190); /* Blanco translúcido */
+}
+
+/* No éxito */
+div.info .resultado.no-exitosa {
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1);
+}
+
+.contenedor{
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.oculto2 {
+    display: none;
+}
+
+
+footer {
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    margin-top: 8.4%;
+}
+
+.footer-logo img {
+    height: 80px;
+    margin-left: 50%;
+}
+
+.footer-logo p {
+    color: #333333; /* Texto del pie de página en color oscuro */
+}
+
+.footer-socials a {
+    margin-left: 15px;
+    color: #333333; /* Iconos de redes sociales en color oscuro */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-socials a:hover {
+    color: #757575; /* Gris intermedio al pasar el ratón sobre los iconos */
+}

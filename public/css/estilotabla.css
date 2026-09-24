@@ -1,0 +1,110 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e3e4e6;
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 30px;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.styled-table thead {
+    background: linear-gradient(to right, #4a90e2, #357ABD);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+}
+
+.styled-table thead th {
+    padding: 14px;
+    font-size: 14px;
+}
+
+.styled-table tbody {
+    background-color: #fefefe;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f3f5f7;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #e7f0ff;
+    transform: scale(1.02);
+}
+
+.styled-table tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.styled-table tbody td:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.styled-table tfoot {
+    background-color: #f0f2f5;
+    text-align: right;
+    font-weight: bold;
+    border-top: 2px solid #ddd;
+}
+
+.styled-table tfoot td {
+    padding: 14px 15px;
+    color: #4a90e2;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container button:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}

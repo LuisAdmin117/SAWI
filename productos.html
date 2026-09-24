@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Productos</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="public/imagenes/SAWI.png" alt="Logo del Software">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="ventas.html">Ventas</a></li>
+                <li><a href="segmentacion.html">Segmentos de clientes</a></li>
+                <li><a href="registro-productos.html">Rendimiento de empleados</a></li>
+                <li><a href="compras.html">Tendencias de compra</a></li>
+                <li><button class="btn-small">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor-productos">
+        <div class="header-general">
+            <h1>Inventario de Productos</h1>
+            <div class="filtrar">
+                <button id="btnFiltro" class="btn-filtrar">Filtrar Productos</button>
+            </div>
+        </div>
+        
+    
+        <div class="tarjetas-contenedor">
+            <div class="tarjeta-producto" data-nombre="Galletas de chocolate" data-categoria="Snacks">
+                <img src="img/galletas.jpg" alt="Galletas de Chocolate">
+                <div class="info-producto">
+                    <h2>Galletas de Chocolate</h2>
+                    <p><strong>Categoría:</strong> Snacks</p>
+                    <p><strong>Cantidad Disponible:</strong> 50</p>
+                    <p><strong>Precio:</strong> $15.50</p>
+                </div>
+            </div>
+    
+            <div class="tarjeta-producto" data-nombre="Jabon Antibacterial" data-categoria="Higiene" >
+                <img src="img/jabon.jpg" alt="Jabón Antibacterial">
+                <div class="info-producto">
+                    <h2>Jabón Antibacterial</h2>
+                    <p><strong>Categoría:</strong> Higiene</p>
+                    <p><strong>Cantidad Disponible:</strong> 30</p>
+                    <p><strong>Precio:</strong> $25.75</p>
+                </div>
+            </div>
+    
+            <div class="tarjeta-producto" data-nombre="Leche Deslactosada" data-categoria="Lacteos">
+                <img src="img/leche.jpg" alt="Leche Deslactosada">
+                <div class="info-producto">
+                    <h2>Leche Deslactosada</h2>
+                    <p><strong>Categoría:</strong> Lácteos</p>
+                    <p><strong>Cantidad Disponible:</strong> 20</p>
+                    <p><strong>Precio:</strong> $22.30</p>
+                </div>
+            </div>
+    
+            <div class="tarjeta-producto" data-nombre="Agua Embotellada" data-categoria="Bebidas">
+                <img src="img/agua.jpg" alt="Agua Embotellada 1L">
+                <div class="info-producto">
+                    <h2>Agua Embotellada 1L</h2>
+                    <p><strong>Categoría:</strong> Bebidas</p>
+                    <p><strong>Cantidad Disponible:</strong> 100</p>
+                    <p><strong>Precio:</strong> $12.00</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto" data-nombre="Galletas de chocolate" data-categoria="Snacks">
+                <img src="img/galletas.jpg" alt="Galletas de Chocolate">
+                <div class="info-producto">
+                    <h2>Galletas de Chocolate</h2>
+                    <p><strong>Categoría:</strong> Snacks</p>
+                    <p><strong>Cantidad Disponible:</strong> 50</p>
+                    <p><strong>Precio:</strong> $15.50</p>
+                </div>
+            </div>
+        
+            <div class="tarjeta-producto" data-nombre="Jabon Antibacterial" data-categoria="Higiene" >
+                <img src="img/jabon.jpg" alt="Jabón Antibacterial">
+                <div class="info-producto">
+                    <h2>Jabón Antibacterial</h2>
+                    <p><strong>Categoría:</strong> Higiene</p>
+                    <p><strong>Cantidad Disponible:</strong> 30</p>
+                    <p><strong>Precio:</strong> $25.75</p>
+                </div>
+            </div>
+        
+            <div class="tarjeta-producto" data-nombre="Leche Deslactosada" data-categoria="Lacteos" >
+                <img src="img/leche.jpg" alt="Leche Deslactosada">
+                <div class="info-producto">
+                    <h2>Leche Deslactosada</h2>
+                    <p><strong>Categoría:</strong> Lácteos</p>
+                    <p><strong>Cantidad Disponible:</strong> 20</p>
+                    <p><strong>Precio:</strong> $22.30</p>
+                </div>
+            </div>
+        
+            <div class="tarjeta-producto" data-nombre="Agua Embotellada" data-categoria="Bebidas" >
+                <img src="img/agua.jpg" alt="Agua Embotellada 1L">
+                <div class="info-producto">
+                    <h2>Agua Embotellada 1L</h2>
+                    <p><strong>Categoría:</strong> Bebidas</p>
+                    <p><strong>Cantidad Disponible:</strong> 100</p>
+                    <p><strong>Precio:</strong> $12.00</p>
+                </div>
+            </div>
+        </div>
+    
+        <div id="filtroModal" class="modal-filtro">
+            <div class="filtro-contenedor">
+                <span class="cerrar">&times;</span>
+                <h2>Filtrar Productos</h2>
+                <label for="nombreProducto">Nombre del Producto:</label>
+                <input type="text" id="nombreProducto" placeholder="Ingrese el nombre del producto">
+    
+                <label for="categoria">Categoría:</label>
+                <select id="categoria">
+                    <option value="campo" >Seleccione una categoría</option>
+                    <option value="Snacks">Snacks</option>
+                    <option value="Higiene">Higiene</option>
+                    <option value="Lácteos">Lácteos</option>
+                    <option value="Bebidas">Bebidas</option>
+                </select>
+    
+                <button id="aplicarFiltro">Aplicar Filtro</button>
+            </div>
+        </div>
+    
+    </div>
+    
+
+    <footer>
+        <div class="footer-logo">
+            <img src="public/imagenes/TSGIA.png" alt="Logo de la Empresa">
+            <p>&copy; 2025 Nombre de la Empresa. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script defer src="public/js/filtro.js"></script>
+</body>
+</html>
+

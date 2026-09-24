@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Rendimiento de Empleados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="public/imagenes/SAWI.png" alt="Logo del Software">
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="ventas.html">Ventas</a></li>
+                <li><a href="segmentacion.html">Segmentos de clientes</a></li>
+                <li><a href="productos.html">Inventario</a></li>
+                <li><a href="compras.html">Tendecias de compra</a></li>
+                <li><button >Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor-reporte">
+    <div class="header-general">
+        <h1>Reporte de Rendimiento de Empleados</h1>
+        <div class="filtrar2">
+            <button id="btnFiltro" class="btn-filtrar">Buscar</button>
+        </div>
+    </div>
+        <div class="reporte-empleado" data-empleado="101">
+            <div class="tarjeta-empleado">
+                <img src="empleado1.jpg" alt="Empleado 101">
+                <div class="info-empleado">
+                    <h2>Empleado 101</h2>
+                    <p><strong>Actividad:</strong> Atención al Cliente</p>
+                    <p><strong>Horas Laboradas:</strong> 8</p>
+                    <p><strong>Descripción:</strong> Atendió a 50 clientes durante el turno, resolviendo dudas y procesando compras en caja.</p>
+                    <p><strong>Porcentaje de Avance:</strong> 95.0%</p>
+                </div>
+            </div>
+            <hr class="separador">
+        </div>
+
+        <div class="reporte-empleado" data-empleado="102">
+            <div class="tarjeta-empleado">
+                <img src="empleado2.jpg" alt="Empleado 102">
+                <div class="info-empleado">
+                    <h2>Empleado 102</h2>
+                    <p><strong>Actividad:</strong> Reposición de Mercancía</p>
+                    <p><strong>Horas Laboradas:</strong> 6</p>
+                    <p><strong>Descripción:</strong> Reabasteció estanterías en las secciones de bebidas y snacks, asegurando la correcta organización.</p>
+                    <p><strong>Porcentaje de Avance:</strong> 87.5%</p>
+                </div>
+            </div>
+            <hr class="separador">
+        </div>
+
+        <div class="reporte-empleado" data-empleado="103">
+            <div class="tarjeta-empleado">
+                <img src="empleado3.jpg" alt="Empleado 103">
+                <div class="info-empleado">
+                    <h2>Empleado 103</h2>
+                    <p><strong>Actividad:</strong> Limpieza y Mantenimiento</p>
+                    <p><strong>Horas Laboradas:</strong> 4</p>
+                    <p><strong>Descripción:</strong> Realizó limpieza profunda en pasillos y zona de refrigeradores, asegurando un ambiente higiénico.</p>
+                    <p><strong>Porcentaje de Avance:</strong> 80.0%</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="filtroModal" class="modal-filtro">
+            <div class="filtro-contenedor">
+                <span class="cerrar">&times;</span>
+                <h2>Filtrar Productos</h2>
+                <label for="empleado">Numero de empleado:</label>
+                <input type="text" id="empleado" placeholder="Ingrese el numero del empleado">
+    
+                <button id="aplicarFiltro">Aplicar Filtro</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="public/imagenes/TSGIA.png" alt="Logo de la Empresa">
+            <p>&copy; 2025 Nombre de la Empresa. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script defer src="public/js/filtro4.js"></script>
+</body>
+</html>

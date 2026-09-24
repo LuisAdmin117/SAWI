@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacciones IA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="public/imagenes/SAWI.png" alt="Logo del Software">
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="clientes-satisfaccion.html">Datos de los clientes</a></li>
+                <li><a href="registro-productos.html">Registrar producto</a></li>
+                <li><a href="Tareas.html">Estado de tareas</a></li>
+                <li><button >Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor-interacciones">
+            <div class="header-general">
+                <h1>Registro de Interacciones con IA</h1>
+                <div class="filtrar2">
+                    <button id="btnFiltro" class="btn-filtrar">Buscar</button>
+                </div>
+            </div>
+
+        <div class="tarjeta" data-cliente="101" data-fecha="2024-12-17">
+            <div class="foto-cliente">
+                <img src="img/cliente1.jpg" alt="Cliente 101">
+            </div>
+            <div class="info">
+                <h2>ID Cliente: 101</h2>
+                <p><strong>Folio Satisfacción:</strong> 5001</p>
+                <p><strong>Fecha y Hora:</strong> 2024-12-17 14:35</p>
+                <p><strong>Tipo de Interacción:</strong> Chatbot Asistencial</p>
+                <p><strong>Duración:</strong> 5 min</p>
+                <p class="resultado exitosa">✔ Exitosa</p>
+            </div>
+        </div>
+
+        <div class="tarjeta" data-cliente="102" data-fecha="2025-02-25">
+            <div class="foto-cliente">
+                <img src="img/cliente2.jpg" alt="Cliente 102">
+            </div>
+            <div class="info">
+                <h2>ID Cliente: 102</h2>
+                <p><strong>Folio Satisfacción:</strong> 5002</p>
+                <p><strong>Fecha y Hora:</strong> 2025-02-25 15:10</p>
+                <p><strong>Tipo de Interacción:</strong> Asistencia Telefónica</p>
+                <p><strong>Duración:</strong> 12 min</p>
+                <p class="resultado no-exitosa">✖ No Exitosa</p>
+            </div>
+        </div>
+
+        <div class="tarjeta" data-cliente="103" data-fecha="2025-01-30">
+            <div class="foto-cliente">
+                <img src="img/cliente3.jpg" alt="Cliente 103">
+            </div>
+            <div class="info">
+                <h2>ID Cliente: 103</h2>
+                <p><strong>Folio Satisfacción:</strong> 5003</p>
+                <p><strong>Fecha y Hora:</strong> 2025-01-30 16:00</p>
+                <p><strong>Tipo de Interacción:</strong> Recomendación de Compra</p>
+                <p><strong>Duración:</strong> 8 min</p>
+                <p class="resultado exitosa">✔ Exitosa</p>
+            </div>
+        </div>
+
+        <div id="filtroModal" class="modal-filtro">
+            <div class="filtro-contenedor">
+                <span class="cerrar">&times;</span>
+                <h2>Filtrar Productos</h2>
+                <label for="idcliente">ID del cliente:</label>
+                <input type="text" id="idcliente" placeholder="Ingrese el ID del cliente">
+    
+                <label for="fecha">Fecha:</label>
+                <input type="text" id="fecha" placeholder="Ingrese la fecha de interacción">
+    
+                <button id="aplicarFiltro">Aplicar Filtro</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="public/imagenes/TSGIA.png" alt="Logo de la Empresa">
+            <p>&copy; 2025 Nombre de la Empresa. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script defer src="public/js/filtro2.js"></script>
+</body>
+</html>

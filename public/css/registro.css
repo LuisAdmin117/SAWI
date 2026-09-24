@@ -1,0 +1,283 @@
+/* Estilos generales (sin cambios) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Fondo con degradado sutil */
+body {
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+header, footer {
+    background-color: #e0e0e0; /* Gris claro para el fondo */
+    padding: 10px 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333333; /* Texto oscuro para buen contraste */
+    transition: padding 0.3s ease; /* Transición para suavizar el cambio de altura */
+}
+
+header:hover {
+    padding: 20px 20px; /* Aumenta la altura del header cuando el cursor está sobre él */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    display: flex;
+    text-decoration: none;
+    color: #333333; /* Color de texto oscuro para los enlaces */
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, padding 0.3s; /* Transición de color y padding */
+    margin-top: -1px;
+}
+
+nav ul li a:hover {
+    background-color: #757575; /* Gris intermedio para el hover */
+    padding: 15px 20px; /* Aumenta el tamaño del botón cuando se pasa el cursor */
+}
+
+button {
+    text-decoration: none;
+    color: #333333; /* Color de texto oscuro para los enlaces */
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, padding 0.3s; /* Transición de color y padding */
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #757575; /* Gris intermedio para el hover */
+    padding: 15px 20px; /* Aumenta el tamaño del botón cuando se pasa el cursor */
+}
+
+/* Contenedor principal del formulario */
+.contenedor-formulario {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto sutil al pasar el mouse */
+.contenedor-formulario:hover {
+    transform: translateY(-5px);
+}
+
+/* Título del formulario */
+h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Estilos de los campos de entrada */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color:#666;
+}
+
+/* Inputs y Select estilizados */
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto en los inputs al hacer clic */
+
+input:focus, select:focus{
+    border-color: #00796b;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: #00796b;
+}
+
+#codigo_barras:focus{
+    border-color: #00796b;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: #00796b;;
+}
+
+/* Botón de cargar imagen personalizado */
+.file-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-container input {
+    display: none;
+}
+
+.file-container label {
+    background-color: #00796b;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.file-container label:hover {
+    background-color: #004d40;
+}
+
+/* Texto del archivo seleccionado */
+#file-name {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Vista previa de la imagen */
+#preview {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: none;
+    margin-top: 10px;
+    border: 2px dashed #ccc;
+}
+
+/* Botón de enviar */
+button {
+    background: #00796b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en el botón */
+button:hover {
+    background: #004d40;
+    transform: scale(1.05);
+}
+select {
+    appearance: none; /* Quita el diseño por defecto del navegador */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/892/892529.png'); /* Ícono de flecha */
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+/* Efecto hover y focus */
+select:hover {
+    background-color: #f1f1f1;
+}
+
+select:focus {
+    border-color: #2980b9;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(52, 152, 219, 0.3);
+}
+
+
+/* Estilo específico para el nuevo campo */
+#codigo_barras {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+footer {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 11.3%;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-logo p {
+    color: #333333; /* Texto del pie de página en color oscuro */
+}
+
+.footer-socials a {
+    margin-left: 15px;
+    color: #333333; /* Iconos de redes sociales en color oscuro */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-socials a:hover {
+    color: #757575; /* Gris intermedio al pasar el ratón sobre los iconos */
+}

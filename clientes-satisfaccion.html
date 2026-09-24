@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Clientes y Satisfacción</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="public/imagenes/SAWI.png" alt="Logo del Software">
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="clientes-satisfaccion.html">Datos de los clientes</a></li>
+                <li><a href="Interacciones_IA.html">Interacciones de la IA</a></li>
+                <li><a href="Tareas.html">Estado de tareas</a></li>
+                <li><button >Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="contenedor">
+        <div class="header-general">
+            <h1>Reporte de Clientes y Satisfacción</h1>
+            <div class="filtrar2">
+                <button id="btnFiltro" class="btn-filtrar">Buscar</button>
+            </div>
+        </div>
+        <!-- Cliente 1 -->
+        <div class="tarjeta" data-folio="1001" data-fecha="2025-01-22">
+            
+            <div class="info">
+                <h2>Juan Pérez</h2>
+                <p><strong>Necesidades:</strong> Productos orgánicos</p>
+                <p><strong>Preferencias:</strong> Lácteos, frutas frescas</p>
+                <p><strong>Comportamiento:</strong> Compra mensual</p>
+                <p><strong>Fecha de Compra:</strong> 2025-01-20 14:30</p>
+                <p><strong>Productos Adquiridos:</strong> Leche orgánica, Queso fresco</p>
+            </div>
+            <div class="info">
+                <h2>Folio: 1001</h2>
+                <p><strong>Satisfacción:</strong> <span class="resultado exitosa">Alta</span></p>
+                <p><strong>Queja:</strong> Ninguna</p>
+                <p><strong>Descripción:</strong> Cliente satisfecho con la compra</p>
+                <p><strong>Estado:</strong> No aplica</p>
+                <p><strong>Fecha Registro:</strong> 2025-01-22</p>
+                <p><strong>Solución:</strong> No aplica</p>
+            </div>
+        </div>
+
+        <!-- Cliente 2 -->
+        <div class="tarjeta" data-folio="1002" data-fecha="2025-01-19" >
+            
+            <div class="info">
+                <h2>María López</h2>
+                <p><strong>Necesidades:</strong> Productos sin gluten</p>
+                <p><strong>Preferencias:</strong> Panadería sin gluten, cereales</p>
+                <p><strong>Comportamiento:</strong> Compra quincenal</p>
+                <p><strong>Fecha de Compra:</strong> 2025-01-18 10:45</p>
+                <p><strong>Productos Adquiridos:</strong> Pan sin gluten, Avena</p>
+            </div>
+            <div class="info">
+                <h2>Folio: 1002</h2>
+                <p><strong>Satisfacción:</strong> <span class="resultado no-exitosa">Media</span></p>
+                <p><strong>Queja:</strong> Producto mal empaquetado</p>
+                <p><strong>Descripción:</strong> Compró leche con fecha vencida	</p>
+                <p><strong>Estado:</strong> Resuelto</p>
+                <p><strong>Fecha Registro:</strong> 2025-01-19</p>
+                <p><strong>Solución:</strong> Reposición del producto</p>
+            </div>
+        </div>
+
+        <div id="filtroModal" class="modal-filtro">
+            <div class="filtro-contenedor">
+                <span class="cerrar">&times;</span>
+                <h2>Filtrar Productos</h2>
+                <label for="folio">Folio:</label>
+                <input type="text" id="folio" placeholder="Ingrese el numero de folio del reporte">
+    
+                <label for="fecha">Fecha:</label>
+                <input type="text" id="fecha" placeholder="Ingrese la fecha de registro">
+    
+                <button id="aplicarFiltro">Aplicar Filtro</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="public/imagenes/TSGIA.png" alt="Logo de la Empresa">
+            <p>&copy; 2025 Nombre de la Empresa. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script defer src="public/js/filtro3.js"></script>
+    
+    <script type="module" src="public/js/conexion_satisfaccion.js"></script>
+</body>
+</html>
